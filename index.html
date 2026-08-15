@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI Assistant — an AI panel that opens beside your browser tab</title>
+<meta name="description" content="An AI assistant that lives in your browser's side panel. Reads the page you're on, answers questions about it, generates images, and takes file attachments — without ever leaving the tab.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%2312151B'/%3E%3Crect x='6' y='9' width='13' height='14' rx='2' fill='%23EDEEF1'/%3E%3Crect x='21' y='9' width='5' height='14' rx='2' fill='%23FFC247'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+<a class="skip-link" href="#main">Skip to content</a>
+
+<header class="site-header">
+  <div class="wrap header-inner">
+    <a class="mark" href="#top" aria-label="Home">
+      <svg width="30" height="30" viewBox="0 0 32 32" fill="none" aria-hidden="true">
+        <rect width="32" height="32" rx="8" fill="var(--ink-700)"/>
+        <rect x="6" y="9" width="13" height="14" rx="2" fill="var(--paper-100)"/>
+        <rect x="21" y="9" width="5" height="14" rx="2" fill="var(--amber)"/>
+      </svg>
+    </a>
+    <nav class="site-nav" aria-label="Primary">
+      <a href="#features">Features</a>
+      <a href="#how">How it works</a>
+      <a href="#use-cases">Use cases</a>
+    </nav>
+    <a class="btn btn-small btn-primary" href="https://chromewebstore.google.com/detail/kimi-ai/canfmapbnkolmpjobofbommgklaeifpp?hl=en" target="_blank" rel="noopener">Add to Chrome</a>
+  </div>
+</header>
+
+<main id="main">
+
+  <!-- HERO -->
+  <section class="hero" id="top">
+    <div class="wrap hero-grid">
+      <div class="hero-copy">
+        <p class="eyebrow"><span class="dot" aria-hidden="true"></span>Opens beside any tab</p>
+        <h1 class="display">Ask the page.<br>Not just the internet.</h1>
+        <p class="lede">An AI assistant that lives in your browser's side panel. It reads what's on your screen, answers questions about it, drafts and researches, and creates images — without you ever leaving the tab.</p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="https://chromewebstore.google.com/detail/kimi-ai/canfmapbnkolmpjobofbommgklaeifpp?hl=en" target="_blank" rel="noopener">Add to Chrome — it's free</a>
+          <a class="btn btn-ghost" href="#features">See it in the panel <span aria-hidden="true">↓</span></a>
+        </div>
+        <p class="hero-fineprint">Free to install · No account required to try it · Works on any site</p>
+      </div>
+
+      <div class="hero-visual" aria-hidden="true">
+        <div class="browser">
+          <div class="browser-bar">
+            <span class="traffic"><i></i><i></i><i></i></span>
+            <span class="url-pill">coffeeorigins.com/history</span>
+            <span class="ext-icon">
+              <svg width="14" height="14" viewBox="0 0 32 32" fill="none"><rect width="32" height="32" rx="8" fill="var(--ink-700)"/><rect x="6" y="9" width="13" height="14" rx="2" fill="var(--paper-100)"/><rect x="21" y="9" width="5" height="14" rx="2" fill="var(--amber)"/></svg>
+            </span>
+          </div>
+          <div class="browser-body">
+            <div class="page-mock">
+              <div class="page-kicker">HISTORY · 6 MIN READ</div>
+              <div class="page-title">The Slow Spread of Coffee</div>
+              <div class="page-line w90"></div>
+              <div class="page-line w100"></div>
+              <div class="page-line w80"></div>
+              <div class="page-img"></div>
+              <div class="page-line w95"></div>
+              <div class="page-line w70"></div>
+              <div class="page-line w85"></div>
+              <div class="page-line w60"></div>
+            </div>
+            <div class="panel-mock">
+              <div class="panel-head">
+                <span class="panel-title">Assistant</span>
+                <span class="panel-status"><span class="pulse"></span>reading this page</span>
+              </div>
+              <div class="panel-thread">
+                <div class="bubble user">Summarize this in three lines</div>
+                <div class="bubble bot fade-1">
+                  Coffee likely began in Ethiopia's highlands, spread through Yemen via Sufi monasteries by the 1400s, and reached Europe by the 1600s — sparking the first café culture.
+                </div>
+                <div class="bubble user fade-2">Now make an image of an Ottoman-era coffeehouse</div>
+                <div class="bubble bot img-bubble fade-3">
+                  <div class="gen-image"><span class="gen-label">image ready</span></div>
+                </div>
+              </div>
+              <div class="panel-input">
+                <span>Ask about this page…</span>
+                <span class="send-dot" aria-hidden="true">↑</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="marquee" role="presentation">
+      <div class="marquee-track">
+        <span>Articles</span><span>PDFs</span><span>Docs</span><span>Spreadsheets</span><span>Emails</span><span>Dashboards</span><span>Videos</span><span>Forms</span>
+        <span>Articles</span><span>PDFs</span><span>Docs</span><span>Spreadsheets</span><span>Emails</span><span>Dashboards</span><span>Videos</span><span>Forms</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- FEATURES -->
+  <section class="section" id="features">
+    <div class="wrap section-head">
+      <p class="eyebrow">Features</p>
+      <h2 class="display display-md">One panel, open the whole time you are.</h2>
+    </div>
+
+    <div class="wrap feature-rows">
+
+      <article class="feature-row reveal">
+        <div class="feature-copy">
+          <div class="feature-icon">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M4 5.5h16a1 1 0 011 1V15a1 1 0 01-1 1H9l-4.5 3.8a.5.5 0 01-.8-.4V16H4a1 1 0 01-1-1V6.5a1 1 0 011-1z"/></svg>
+          </div>
+          <h3>Chat with the page you're on</h3>
+          <p>Open the panel on an article, a thread, or a PDF and ask about it directly — what does this mean, what's missing, what would you cut. The assistant already sees what's on screen, so you never paste a link or copy a paragraph just to explain yourself.</p>
+        </div>
+        <aside class="rail">
+          <span class="rail-label">No copy-paste</span>
+          <p class="rail-note">It already has the context.</p>
+        </aside>
+      </article>
+
+      <article class="feature-row reveal">
+        <div class="feature-copy">
+          <div class="feature-icon">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M5 5h14M5 10h14M5 15h9M5 20h6"/></svg>
+          </div>
+          <h3>Summarize before you commit to reading</h3>
+          <p>Long report, dense thread, a page you're not sure is worth your next ten minutes — get the shape of it first, then decide where to actually spend your attention.</p>
+        </div>
+        <aside class="rail">
+          <span class="rail-label">One click</span>
+          <p class="rail-note">Know the shape before you dive in.</p>
+        </aside>
+      </article>
+
+      <article class="feature-row reveal">
+        <div class="feature-copy">
+          <div class="feature-icon">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3.5" y="4.5" width="17" height="15" rx="2"/><circle cx="9" cy="10" r="1.6"/><path d="M20 15l-4.5-4.5a1.5 1.5 0 00-2.1 0L5 19"/></svg>
+          </div>
+          <h3>Generate images without switching tools</h3>
+          <p>Describe a picture and it appears right in the panel, ready to drag into a doc, a deck, or a chat — no separate image tool, no new tab to lose your place in.</p>
+        </div>
+        <aside class="rail">
+          <span class="rail-label">Inline</span>
+          <p class="rail-note">Stays where the rest of your work is.</p>
+        </aside>
+      </article>
+
+      <article class="feature-row reveal">
+        <div class="feature-copy">
+          <div class="feature-icon">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M17 8.5l-7.6 7.6a3 3 0 01-4.2-4.2l8.3-8.3a5 5 0 017.1 7.1l-8.5 8.5a1 1 0 01-1.4-1.4l7.8-7.8"/></svg>
+          </div>
+          <h3>Attach whatever you're working from</h3>
+          <p>Drop in a PDF, a spreadsheet, a screenshot, and ask questions about it next to the page you already have open — the assistant reads both at once.</p>
+        </div>
+        <aside class="rail">
+          <span class="rail-label">Files + page</span>
+          <p class="rail-note">Cross-reference without alt-tabbing.</p>
+        </aside>
+      </article>
+
+    </div>
+  </section>
+
+  <!-- MORE FEATURES -->
+  <section class="section section-alt" id="more">
+    <div class="wrap section-head">
+      <p class="eyebrow">Also in the panel</p>
+      <h2 class="display display-md">Built for more than chat.</h2>
+    </div>
+    <div class="wrap more-grid">
+
+      <div class="more-card reveal">
+        <div class="more-icon">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.5 2.6 3.8 5.7 3.8 9s-1.3 6.4-3.8 9c-2.5-2.6-3.8-5.7-3.8-9s1.3-6.4 3.8-9z"/></svg>
+        </div>
+        <h3>Translate on the spot</h3>
+        <p>Highlight a line in any language and get it back in yours — over 100 to choose from.</p>
+      </div>
+
+      <div class="more-card reveal">
+        <div class="more-icon">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3.5" y="4.5" width="17" height="12" rx="1.5"/><path d="M8 20h8M12 16.5V20"/></svg>
+        </div>
+        <h3>Turn an idea into a deck</h3>
+        <p>Describe the topic and get a slide-by-slide outline back, ready to fill in and present.</p>
+      </div>
+
+      <div class="more-card reveal">
+        <div class="more-icon">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M8 8l-4.5 4L8 16M16 8l4.5 4L16 16M13.5 6l-3 12"/></svg>
+        </div>
+        <h3>Get unstuck on code</h3>
+        <p>Paste a snippet and have it explained, debugged, or cleaned up, in whatever language you're writing.</p>
+      </div>
+
+      <div class="more-card reveal">
+        <div class="more-icon">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3.5" y="4.5" width="7.5" height="15" rx="1.5"/><rect x="13" y="4.5" width="7.5" height="15" rx="1.5"/></svg>
+        </div>
+        <h3>Compare two tabs at once</h3>
+        <p>Point it at two open pages and get the differences back as a straight, readable list.</p>
+      </div>
+
+      <div class="more-card reveal">
+        <div class="more-icon">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M5 4.5h14v15H5z"/><path d="M8.5 9.5l1.8 1.8 3.2-3.6M8.5 15.5h7"/></svg>
+        </div>
+        <h3>Turn a meeting into a plan</h3>
+        <p>Drop in a messy transcript and pull out a tidy list of what the team actually needs to do.</p>
+      </div>
+
+      <div class="more-card reveal">
+        <div class="more-icon">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M4 7h11M4 12h16M4 17h8"/><path d="M17 15l3 2-3 2"/></svg>
+        </div>
+        <h3>Rewrite until it's right</h3>
+        <p>Get the same paragraph back a few different ways until the tone actually lands.</p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- HOW IT WORKS -->
+  <section class="section" id="how">
+    <div class="wrap section-head">
+      <p class="eyebrow">How it works</p>
+      <h2 class="display display-md">Three steps. No new window.</h2>
+    </div>
+    <div class="wrap steps">
+      <div class="step reveal">
+        <span class="step-num">01</span>
+        <h3>Click the icon</h3>
+        <p>The panel opens beside your tab, not on top of it — your page stays exactly where it was.</p>
+      </div>
+      <div class="step reveal">
+        <span class="step-num">02</span>
+        <h3>Ask anything</h3>
+        <p>About the page in front of you, or about something else entirely. Attach a file if you need to.</p>
+      </div>
+      <div class="step reveal">
+        <span class="step-num">03</span>
+        <h3>Keep browsing</h3>
+        <p>The answer stays in view while the rest of the page keeps scrolling underneath it.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- USE CASES -->
+  <section class="section" id="use-cases">
+    <div class="wrap section-head">
+      <p class="eyebrow">Use cases</p>
+      <h2 class="display display-md">Wherever the browser already is, this is too.</h2>
+    </div>
+    <div class="wrap use-grid">
+      <div class="use-card reveal">
+        <span class="use-tag">Work</span>
+        <p>Draft a reply, build a deck outline, turn a meeting transcript into an action list — without twenty tabs open to do it.</p>
+      </div>
+      <div class="use-card reveal">
+        <span class="use-tag">Study</span>
+        <p>Turn a dense chapter into notes you'll actually reread, get a stuck line of code explained, or read a source in another language.</p>
+      </div>
+      <div class="use-card reveal">
+        <span class="use-tag">Everyday life</span>
+        <p>Plan a trip, compare two products across open tabs, understand a form before you sign it.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- PRIVACY -->
+  <section class="section trust">
+    <div class="wrap trust-inner reveal">
+      <h2 class="display display-md">Reads when you ask. Not before.</h2>
+      <p>The panel only looks at a page's content when you open it and ask something — no background scanning, no silent log of everywhere you browse.</p>
+    </div>
+  </section>
+
+  <!-- FINAL CTA -->
+  <section class="section cta-section" id="cta">
+    <div class="wrap cta-inner reveal">
+      <h2 class="display display-lg">Open a tab.<br>Open the panel.</h2>
+      <p>Free to install, ready in your side panel in under a minute.</p>
+      <a class="btn btn-primary btn-large" href="https://chromewebstore.google.com/detail/kimi-ai/canfmapbnkolmpjobofbommgklaeifpp?hl=en" target="_blank" rel="noopener">Add to Chrome — it's free</a>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="wrap footer-inner">
+    <p class="footer-tagline">The panel that reads with you.</p>
+    <nav class="footer-nav" aria-label="Footer">
+      <a href="#features">Features</a>
+      <a href="#how">How it works</a>
+      <a href="#use-cases">Use cases</a>
+    </nav>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>
